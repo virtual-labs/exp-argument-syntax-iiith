@@ -33,14 +33,14 @@
       "source": "learn/index.html",
       "label": "Learn",
       "unit-type": "task",
-      "content-type": "learn"
+      "content-type": "simulation"
     },
     {
       "target": "practice.html",
       "source": "practice/index.html",
       "label": "Practice",
       "unit-type": "task",
-      "content-type": "practice"
+      "content-type": "simulation"
     },
     {
       "target": "posttest.html",

@@ -1,1 +1,52 @@
-/* You CSS goes in here */
+.hidden {
+  display: none;
+}
+.code {
+  font-family: "Fira Mono", "monospace";
+  white-space: pre-wrap;
+  text-align: start;
+}
+
+.obs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.operand {
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background-color: aqua;
+  width: max-content;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.lambda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+.wrong,
+.correct {
+  font-size: large;
+  font-weight: 900;
+}

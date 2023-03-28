@@ -1,10 +1,13 @@
-def information(name, *expenses, **kwargs):
-    print('Your name is', name)
-    sum = 0
-    for i in expenses:
-        sum += i
-    print('Your total expenses are', sum)
-    for key, value in kwargs.items():
-        print('Your', key, 'is', value)
+def simple_interest(principal, interest_rate=7, years=10):
+    interest = principal * interest_rate * years / 100
+    amount = principal + interest
+    return amount
 
-information('Adyansh', 1, 2, 3,  contact=1234567890)
+fv = simple_interest(1000)
+print(fv)  # Output: 1628.89
+
+fv = simple_interest(1000, 8)
+print(fv)  # Output: 1967.15
+
+fv = simple_interest(1000, 6, 15)
+print(fv)  # Output: 2208.27

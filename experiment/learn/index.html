@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/swappable.js"></script> -->
 
     <link
       rel="stylesheet"
@@ -56,20 +58,20 @@
             </div>
             <div class="v-datalist-row">Sample outputs</div>
             <!-- prettier-ignore -->
-            <div class="v-datalist-row code" style="margin-left: 20%;">calculatePrice(100, 2, 20) # 160
+            <div class="v-datalist-row code">calculatePrice(100, 2, 20) # 160
 calculatePrice(100, 2)     # 180
 calculatePrice(100)        # 90
 						</div>
           </div>
         </div>
-        <div class="column is-6-desktop is-12-tablet is-12-mobile">
+        <div class="column is-5-desktop is-12-tablet is-12-mobile">
           <div class="v-datalist-container">
             <div class="v-datalist-title">Complete the program</div>
             <!-- prettier-ignore -->
             <div class="v-datalist-row code">
-def calculatePrice(price, <div class="blank blank-default" draggable="true"></div>, <div class="blank blank-default" draggable="true"></div>):
+def calculatePrice(price, <div class="blank blank-default drag" draggable="true"></div>, <div class="blank blank-default drag" draggable="true"></div>):
     discountAmount = price * (discount / 100)
-    return <div class="blank blank-default" draggable="true"></div>
+    return <div class="blank blank-default drag" draggable="true"></div>
 		
 print("Final Price: " + str(calculatePrice(100, 2, 20)))
 print("Final Price: " + str(calculatePrice(100, 2)))
@@ -77,13 +79,13 @@ print("Final Price: " + str(calculatePrice(100)))
 					
             </div>
             <div class="v-datalist-row options">
-              <div class="option" draggable="true">quantity = 1</div>
+              <div class="option drag" draggable="true">quantity = 1</div>
               <!-- prettier-ignore -->
-              <div class="option" draggable="true">(price - discountAmount)*quantity</div>
-              <div class="option" draggable="true">discount = 10</div>
-              <div class="option" draggable="true">quantity = 10</div>
-              <div class="option" draggable="true">discountAmount*quantity</div>
-              <div class="option" draggable="true">discount = 1</div>
+              <div class="option drag" draggable="true">(price - discountAmount)*quantity</div>
+              <div class="option drag" draggable="true">discount = 10</div>
+              <div class="option drag" draggable="true">quantity = 10</div>
+              <div class="option drag" draggable="true">discountAmount*quantity</div>
+              <div class="option drag" draggable="true">discount = 1</div>
             </div>
             <button
               class="v-button"
@@ -156,29 +158,29 @@ Your contact number is 123456
 						</div>
           </div>
         </div>
-        <div class="column is-6-desktop is-12-tablet is-12-mobile">
+        <div class="column is-5-desktop is-12-tablet is-12-mobile">
           <div class="v-datalist-container">
             <div class="v-datalist-title">Complete the program</div>
             <!-- prettier-ignore -->
             <div class="v-datalist-row code">
-def information(name, <div class="blank blank-variable" draggable="true"></div>, <div class="blank blank-variable" draggable="true"></div>):
+def information(name, <div class="blank blank-variable drag" draggable="true"></div>, <div class="blank blank-variable drag" draggable="true"></div>):
     print('Your name is', name)
     sum = 0
     for i in expenses:
         sum += i
     print('Your total expenses are', sum)
-    for key, value in <div class="blank blank-variable" draggable="true"></div>:
+    for key, value in <div class="blank blank-variable drag" draggable="true"></div>:
         print('Your', key, 'is', value)
 
 information('Adyansh', 1, 2, 3,  contact=1234567890)
             </div>
             <div class="v-datalist-row options">
-              <div class="option" draggable="true">*info</div>
-              <div class="option" draggable="true">*expenses</div>
-              <div class="option" draggable="true">info.items()</div>
-              <div class="option" draggable="true">**info</div>
-              <div class="option" draggable="true">**expenses</div>
-              <div class="option" draggable="true">info</div>
+              <div class="option drag" draggable="true">*info</div>
+              <div class="option drag" draggable="true">*expenses</div>
+              <div class="option drag" draggable="true">info.items()</div>
+              <div class="option drag" draggable="true">**info</div>
+              <div class="option drag" draggable="true">**expenses</div>
+              <div class="option drag" draggable="true">info</div>
             </div>
             <button
               class="v-button"

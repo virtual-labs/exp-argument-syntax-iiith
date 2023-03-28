@@ -33,7 +33,7 @@
                 <a> Default Arguments </a>
               </li>
               <li id="variable" onclick="changeTabs(event)">
-                <a> Variable arguments </a>
+                <a> Arbitrary arguments </a>
               </li>
             </ul>
           </div>
@@ -84,16 +84,27 @@ print("Final Price: " + str(calculatePrice(100)))
               <div class="option drag" draggable="true">(price - discountAmount)*quantity</div>
               <div class="option drag" draggable="true">discount = 10</div>
               <div class="option drag" draggable="true">quantity = 10</div>
-              <div class="option drag" draggable="true">discountAmount*quantity</div>
+              <div class="option drag" draggable="true">
+                discountAmount*quantity
+              </div>
               <div class="option drag" draggable="true">discount = 1</div>
             </div>
-            <button
-              class="v-button"
-              style="margin-bottom: 1rem"
-              onclick="handleSubmitDefault()"
-            >
-              Submit
-            </button>
+            <div class="v-datalist-row">
+              <button
+                class="v-button"
+                style="margin-bottom: 1rem"
+                onclick="handleSubmitDefault()"
+              >
+                Submit
+              </button>
+              <button
+                class="v-button"
+                style="margin-left: 1rem"
+                onclick="revealAnswerDefault()"
+              >
+                Reveal Answer
+              </button>
+            </div>
             <div class="v-datalist-row hidden correct" id="correct-default">
               Correct Answer! View the same application without using extended
               argument syntax below.
@@ -182,13 +193,22 @@ information('Adyansh', 1, 2, 3,  contact=1234567890)
               <div class="option drag" draggable="true">**expenses</div>
               <div class="option drag" draggable="true">info</div>
             </div>
-            <button
-              class="v-button"
-              style="margin-bottom: 1rem"
-              onclick="handleSubmitVariable()"
-            >
-              Submit
-            </button>
+            <div class="v-datalist-row">
+              <button
+                class="v-button"
+                style="margin-bottom: 1rem"
+                onclick="handleSubmitVariable()"
+              >
+                Submit
+              </button>
+              <button
+                class="v-button"
+                style="margin-left: 1rem"
+                onclick="revealAnswerVariable()"
+              >
+                Reveal Answer
+              </button>
+            </div>
             <div class="v-datalist-row hidden correct" id="correct-variable">
               Correct Answer! View the same application without using extended
               argument syntax below.

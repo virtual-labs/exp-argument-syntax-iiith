@@ -44,6 +44,26 @@ function handleSubmitDefault() {
   }
 }
 
+function revealAnswerDefault() {
+  let options = [...document.getElementsByClassName('option')];
+  let blanks = [...document.getElementsByClassName("blank-default")];
+  
+  for(let i = 0; i < options.length; i++) {
+    if(options[i].innerHTML == "quantity = 1"){
+      blanks[0].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+    if(options[i].innerHTML == "discount = 10"){
+      blanks[1].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+    if(options[i].innerHTML == "(price - discountAmount)*quantity"){
+      blanks[2].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+  }
+}
+
 function handleSubmitVariable() {
   let blanks = document.getElementsByClassName("blank-variable");
   let blank = false;
@@ -74,112 +94,25 @@ function handleSubmitVariable() {
   }
 }
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   function handleDragStart(e) {
-//     this.style.opacity = "0.4";
-
-//     dragSrcEl = this;
-
-//     e.dataTransfer.effectAllowed = "move";
-//     e.dataTransfer.setData("text/html", this.innerHTML);
-//   }
-
-//   function handleDragEnd(e) {
-//     this.style.opacity = "1";
-
-//     items.forEach(function (item) {
-//       item.classList.remove("over");
-//     });
-//   }
-
-//   function handleDragOver(e) {
-//     e.preventDefault();
-//     return false;
-//   }
-
-//   function handleDragEnter(e) {
-//     this.classList.add("over");
-//   }
-
-//   function handleDragLeave(e) {
-//     this.classList.remove("over");
-//   }
-
-//   function handleDrop(e) {
-//     e.stopPropagation();
-//     if (dragSrcEl !== this) {
-//       dragSrcEl.innerHTML = this.innerHTML;
-//       this.innerHTML = e.dataTransfer.getData("text/html");
-//     }
-
-//     return false;
-//   }
-
-//   function handleTouchStart(e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     let touch = e.touches[0];
-//     let dragEvent = new DragEvent("dragstart", {})
-//     this.dispatchEvent(dragEvent)
-//   }
-
-//   function handleTouchMove(e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     let touch = e.touches[0];
-//     let mouseEvent = new MouseEvent("mousemove", {
-//       clientX: touch.clientX,
-//       clientY: touch.clientY,
-//     });
-//     this.dispatchEvent(mouseEvent);
-//   }
-
-//   function handleTouchEnd(e) {
-//     let mouseEvent = new MouseEvent("mouseup", {});
-//     this.dispatchEvent(mouseEvent);
-//   }
-
-//   let items = document.querySelectorAll(".option");
-//   items = [...items, ...document.querySelectorAll(".blank")];
-//   items.forEach(function (item) {
-//     item.addEventListener("dragstart", handleDragStart);
-//     item.addEventListener("dragover", handleDragOver);
-//     item.addEventListener("dragenter", handleDragEnter);
-//     item.addEventListener("dragleave", handleDragLeave);
-//     item.addEventListener("dragend", handleDragEnd);
-//     item.addEventListener("drop", handleDrop);
-//     item.addEventListener("touchstart", handleTouchStart);
-//     item.addEventListener("touchmove", handleTouchMove);
-//     item.addEventListener("touchend", handleTouchEnd);
-//   });
-// });
-
-// interact('.option .blank')
-//   .dropzone({
-//     accept: '.option .blank',
-//     overlap: 0.75,
-//     ondropactivate: function (event) {
-//       event.target.classList.add('over');
-//     },
-//     ondropdeactivate: function (event) {
-//       event.target.classList.remove('over');
-//     }
-//   })
-//   .draggable({
-//     inertia: true,
-//     restrict: {
-//       restriction: "parent",
-//       endOnly: true,
-//       elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-//     },
-//     autoScroll: true,
-//     onmove: function(e) {
-
-//     },
-//     onend: function (event) {
-
-//     }
-//   });
+function revealAnswerVariable() {
+  let options = [...document.getElementsByClassName('option')];
+  let blanks = [...document.getElementsByClassName("blank-variable")];
+  
+  for(let i = 0; i < options.length; i++) {
+    if(options[i].innerHTML == "*expenses"){
+      blanks[0].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+    if(options[i].innerHTML == "**info"){
+      blanks[1].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+    if(options[i].innerHTML == "info.items()"){
+      blanks[2].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+  }
+}
 
 function dragMoveListener(event) {
   var target = event.target;
@@ -242,19 +175,3 @@ interact(".drag").dropzone({
   },
 });
 
-// use shopify's drag and drop library to make the drag and drop work
-// const swappable = new Swappable.default(
-// 	document.querySelectorAll('.options'),
-// 	{
-// 		draggable: '.option',
-// 	},
-// );
-
-// swappable.on('drag:start', (e) => {e.data.source.classList.add('over');console.log('drag:start', e)});
-// swappable.on('drag:move', (e) => console.log('drag:move', e));
-// swappable.on('drag:over', (e) => console.log('drag:over', e));
-// swappable.on('drag:stop', (e) => console.log('drag:stop', e));
-
-// swappable.on('swappable:start', (e) => console.log('swappable:start', e));
-// swappable.on('swappable:swapped', (e) => console.log('swappable:swapped', e));
-// swappable.on('swappable:stop', (e) => console.log('swappable:stop', e));

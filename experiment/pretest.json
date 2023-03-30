@@ -2,38 +2,136 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What are the types of arguments that can be passed to a Python function?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": " Only Default Arguments",
+        "b": "Only Keyword Arguments",
+        "c": "Keyword arguments and default arguments",
+        "d": "None of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of using default arguments in Python?",
+      "answers": {
+        "a": "To make a function required to have an argument",
+        "b": "To allow the user to call a function without specifying a value for an argument",
+        "c": "To prevent a function from having more than one argument",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is an example of a required argument in Python?",
+      "answers": {
+        "a": "def func(a, b=2):",
+        "b": "def func(a, b):",
+        "c": "def func(a=1, b=2):",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of using the **kwargs syntax in Python?",
+      "answers": {
+        "a": "To allow a function to accept an arbitrary number of keyword arguments",
+        "b": "To require a function to have at least one keyword argument",
+        "c": " To prevent a function from accepting any keyword arguments",
+        "d": "All of the above"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following is an example of a function with variable-length arguments in Python?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "def func(a, b=1, *args):",
+        "b": "def func(a, b=2):",
+        "c": "def func(a=1, b=2):",
+        "d": "All of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What distinguishes a keyword argument from a required argument in Python?",
+      "answers": {
+        "a": "When invoking a function, required parameters must be supplied in the correct order, whereas keyword arguments can be specified in any order.",
+        "b": "Unlike keyword arguments, which must be called using their name, required arguments can be called using their name.",
+        "c": "Keyword arguments have a default value, whereas required arguments must be supplied with a value when calling a function.",
+        "d": " While keyword arguments may have a default value, required arguments do not."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of using the *args syntax in Python?",
+      "answers": {
+        "a": "To allow a function to accept an arbitrary number of keyword arguments",
+        "b": "To allow a function to accept an arbitrary number of positional arguments",
+        "c": "To make a function required to have an argument",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is an example of a function with both default and keyword arguments in Python?",
+      "answers": {
+        "a": "def func(a, b, c=1, d):",
+        "b": "def func(a=1, b, c=2, d=3):",
+        "c": "def func(a, b, *args, **kwargs):",
+        "d": "All of the above"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens if a required argument is not provided when calling a Python function?",
+      "answers": {
+        "a": "It will throw an Error",
+        "b": "The function will use the default value for the argument, if it has one",
+        "c": "The function will use the last provided argument for the missing argument.",
+        "d": "All of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Can a function have both variable-length arguments and keyword arguments in Python?",
+      "answers": {
+        "a": "Yes, but the variable-length arguments must come before the keyword arguments.",
+        "b": "No, a function can have either variable-length arguments or keyword arguments, but not both.",
+        "c": "It depends on the specific use case and function requirements.",
+        "d": "All of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is an example of a function with required arguments only in Python?",
+      "answers": {
+        "a": "def func(a, b=1, **kwargs):",
+        "b": "def func(a, b, c):",
+        "c": "def func(*args):",
+        "d": "None of the Above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the output of the following code?\n\ndef my_fun(a, b=1, *args, **kwargs):\n    print(a, b, args, kwargs)\n\nfoo(10,20, *(30,40), **{'c': 3, 'd': 4})",
+      "answers": {
+        "a": "10 20 (30, 40) {'c': 3, 'd': 4}",
+        "b": "10 20 (30, 40) {'c': 3}",
+        "c": "10 1 (20, 30, 40) {'c': 3, 'd': 4}",
+        "d": "None of the Above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }

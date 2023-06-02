@@ -1,17 +1,7 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "What are the types of arguments that can be passed to a Python function?",
-      "answers": {
-        "a": " Only Default Arguments",
-        "b": "Only Keyword Arguments",
-        "c": "Keyword arguments and default arguments",
-        "d": "None of the above"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
+    
     {
       "question": "What is the purpose of using default arguments in Python?",
       "answers": {
@@ -67,17 +57,7 @@
       "correctAnswer": "d",
       "difficulty": "intermediate"
     },
-    {
-      "question": "What is the purpose of using the *args syntax in Python?",
-      "answers": {
-        "a": "To allow a function to accept an arbitrary number of keyword arguments",
-        "b": "To allow a function to accept an arbitrary number of positional arguments",
-        "c": "To make a function required to have an argument",
-        "d": "None of the above"
-      },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
-    },
+
     {
       "question": "Which of the following is an example of a function with both default and keyword arguments in Python?",
       "answers": {

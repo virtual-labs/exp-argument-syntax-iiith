@@ -1,11 +1,5 @@
-1. <https://www.istockphoto.com/vector/cook-gm482950615-17346544>
+1. <https://www.dreamstime.com/young-man-programmer-working-computer-code-screen-student-programming-vector-concept-man-work-computer-programmer-image102846347>
 
-2.<https://www.dreamstime.com/boy-studying-online-education-home-cartoon-vector-illustration-student-workplace-desktop-computer-doing-homework-surfing-image187238145#_>
+2. <https://www.shutterstock.com/image-vector/boy-studying-home-via-teleconference-using-1892734630>
 
-3. <https://www.educba.com/python-default-arguments/>
-
-4.<https://www.brainkart.com/article/Function-Arguments_37242/>
-
-5. <https://medium.com/techiepedia/keyword-arguments-with-d1acc12aadd>
-
-6. <https://realpython.com/python-kwargs-and-args/>
+3. <http://clipart-library.com/clipart/2020735.htm>

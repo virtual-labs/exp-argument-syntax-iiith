@@ -1,0 +1,25 @@
+
+/home/runner/work/exp-argument-syntax-iiith/exp-argument-syntax-iiith/experiment/learn/js/main.js
+    2:10  warning  'changeTabs' is defined but never used            no-unused-vars
+   17:10  warning  'handleSubmitDefault' is defined but never used   no-unused-vars
+   47:10  warning  'revealAnswerDefault' is defined but never used   no-unused-vars
+   67:10  warning  'handleSubmitVariable' is defined but never used  no-unused-vars
+   97:10  warning  'revealAnswerVariable' is defined but never used  no-unused-vars
+  127:1   warning  'interact' is not defined                         no-undef
+  139:1   warning  'interact' is not defined                         no-undef
+
+/home/runner/work/exp-argument-syntax-iiith/exp-argument-syntax-iiith/experiment/practice/js/main.js
+    2:10  warning  'changeTabs' is defined but never used      no-unused-vars
+   71:3   warning  'anime' is not defined                      no-undef
+   84:10  warning  Unexpected constant condition               no-constant-condition
+  102:10  warning  'resetDefault' is defined but never used    no-unused-vars
+  112:16  warning  'submitVariable' is defined but never used  no-unused-vars
+  136:3   warning  'sum' is not defined                        no-undef
+  142:5   warning  'sum' is not defined                        no-undef
+  144:19  warning  'sum' is not defined                        no-undef
+  146:3   warning  'anime' is not defined                      no-undef
+  160:10  warning  Unexpected constant condition               no-constant-condition
+  178:10  warning  'resetVariable' is defined but never used   no-unused-vars
+
+✖ 18 problems (0 errors, 18 warnings)
+

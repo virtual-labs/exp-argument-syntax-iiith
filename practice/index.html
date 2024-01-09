@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Argument Syntax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="v-tabs">
+            <ul>
+              <li class="is-active" id="default" onclick="changeTabs(event)">
+                <a> Default Arguments </a>
+              </li>
+              <li id="variable" onclick="changeTabs(event)">
+                <a> Variable arguments </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="default">
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-3-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">
+              Let's Learn Extended Argument Syntax!
+            </div>
+            <div class="v-datalist-row">
+              Call the function using the textbox given there and see the output
+              and observations given below.
+            </div>
+            <div class="v-datalist-row v-bold">
+              The function on the right calculates the simple interest on a
+              given principal, interest rate and time. If the time is not given,
+              it is assumed to be 10 years. If the interest rate is not given,
+              it is assumed to be 7%.
+            </div>
+            <div class="v-datalist-row v-bold">
+              Fill in the blank with a comma separated list of 1, 2 or 3 numbers
+              to find out the use of default arguments.
+            </div>
+            <div class="v-datalist-row">
+              Press Reset to clear the text box and reset the animation.
+            </div>
+          </div>
+        </div>
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Run the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+def simple_interest(principal, interest_rate=7, years=10):
+    interest = principal * interest_rate * years / 100
+    amount = principal + interest
+    return amount
+
+print(simple_interest(<input type="text" id="default-arguments" />))
+          </div>
+            <div class="v-button" id="sub" onclick="submitDefault()">
+              Submit
+            </div>
+            <div class="v-datalist-row v-bold" style="text-align: start">
+              Output is:
+              <div id="output-default" style="display: inline"></div>
+            </div>
+            <button
+              class="v-button"
+              style="align-self: flex-start; margin: 1rem"
+              onclick="resetDefault()"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered is-flex-direction-row">
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Observations</div>
+            <div class="v-datalist-row obs-container">
+              <div
+                class="lambda"
+                id="default-function"
+                style="min-height: 10rem"
+              >
+                simple_interest
+              </div>
+              <div class="operand" id="principal">Principal</div>
+              <div class="operand" id="rate">Rate=7</div>
+              <div class="operand" id="time">Time=10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="variable hidden">
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-3-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">
+              Let's Learn Extended Argument Syntax!
+            </div>
+            <div class="v-datalist-row">
+              Call the function using the textbox given there and see the output
+              and observations given below.
+            </div>
+            <div class="v-datalist-row v-bold">
+              The function on the right calculates the sum of all the arguments
+              passed to it. It does this using the *args approach to take in an
+              arbitrary number of arguments.
+            </div>
+            <div class="v-datalist-row v-bold">
+              Fill in the blank with a comma separated list of numbers to find
+              out the use of variable arguments.
+            </div>
+          </div>
+        </div>
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Run the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+def sum(*numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total
+
+print(sum(<input type="text" id="variable-arguments" />))
+          	</div>
+            <div class="v-button" id="sub-var" onclick="submitVariable()">Submit</div>
+            <div class="v-datalist-row v-bold" style="text-align: start">
+              Output is:
+              <div id="output-variable"></div>
+            </div>
+            <button
+              class="v-button"
+              style="align-self: flex-start; margin: 1rem"
+              onclick="resetVariable()"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered is-flex-direction-row">
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Observations</div>
+            <div class="v-datalist-row obs-container" id="var-container">
+              <div class="lambda" id="variable-function">sum</div>
+              <div class="operand">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  <script src="../assets/js/iframeResize.js"></script></body>
+</html>

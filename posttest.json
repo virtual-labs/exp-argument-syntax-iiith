@@ -1,0 +1,181 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the syntax for passing arguments to a function in Python?",
+      "answers": {
+        "a": "def function_name(arguments)",
+        "b": "def function_name(argument1, argument2, ...)",
+        "c": "def function_name()",
+        "d": "None of the above"
+      },
+       "explanations": {
+                          "a": "This option is incorrect because the syntax does not specify the individual names for the arguments. In Python, it is necessary to provide names for each argument.",
+                          "b": "Option b is the correct answer because it represents the correct syntax for specifying multiple arguments when defining a function in Python.",
+                          "c": "This option is incorrect because it represents a function definition without any arguments. While it is possible to define functions without arguments, this is not the complete syntax for passing arguments to a function.",
+                          "d": "This option is incorrect because option b is the correct answer."
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a default argument in Python?",
+      "answers": {
+        "a": " An argument that is mandatory to pass while calling a function",
+        "b": "An argument that has a default value, which is used if the value is not provided in the function call",
+        "c": "An argument that can be passed in any order",
+        "d": "None of the above"
+      },
+       "explanations": {
+                          "a": "This option is incorrect. A required argument is an argument that must be provided when calling a function, but it does not necessarily imply that it is mandatory to pass.",
+                          "b": "This option is correct. A default argument is an argument that has a predefined value assigned to it in the function definition. ",
+                          "c": "This option is incorrect. The order of arguments in a function call must match the order of parameters in the function definition, unless you explicitly specify the argument using its name (keyword argument)",
+                          "d": "This option is incorrect as option b correctly describes a default argument in Python."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "What happens if the number of arguments passed to a function does not match with the number of arguments defined in the function signature?",
+      "answers": {
+        "a": "A TypeError is raised",
+        "b": "The function ignores the extra arguments",
+        "c": "The function assumes default values for the missing arguments",
+        "d": "All of the above"
+      },
+       "explanations": {
+                          "a": "This option is correct. If the number of arguments passed to a function does not match the number of arguments defined in the function signature, a TypeError will be raised indicating that the function expects a different number of arguments.",
+                          "b": "This option is incorrect. When the number of arguments passed exceeds the number of arguments defined in the function signature, the extra arguments will cause a TypeError, as mentioned in option a.",
+                          "c": "This option is incorrect. If arguments are missing in the function call, and the corresponding parameters in the function definition do not have default values, a TypeError will be raised, as mentioned in option a.",
+                          "d": "This option is incorrect as options b and c are not accurate. The correct answer is option a, which states that a TypeError is raised when the number of arguments passed to a function does not match with the number of arguments defined in the function signature"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How can you pass an arbitrary number of arguments to a function in Python?",
+      "answers": {
+        "a": "By using a list as an argument",
+        "b": "By using a dictionary as an argument",
+        "c": "By using a tuple preceded by a *(star) as an argument",
+        "d": "All of the above"
+      },
+       "explanations": {
+                          "a": "This option is incorrect. While you can pass a list as an argument to a function in Python, it is not specifically used to pass an arbitrary number of arguments.",
+                          "b": "This option is incorrect. Similar to option a, you can pass a dictionary as an argument to a function, but it does not allow for passing an arbitrary number of arguments. It is a single argument that consists of key-value pairs.",
+                          "c": "This option is correct. In Python, you can pass an arbitrary number of arguments to a function by using a tuple preceded by a *(star) as an argument. This allows you to pass multiple arguments, and they are collected into a tuple within the function.",
+                          "d": "This option is incorrect as options a and b are not accurate."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is an example of a default argument in Python?",
+      "answers": {
+        "a": "def function_name(argument1, argument2)",
+        "b": "def function_name(argument1='value1', argument2='value2')",
+        "c": "def function_name(argument1, argument2='value1')",
+        "d": "def function_name(argument1='value1', argument2)"
+      },
+       "explanations": {
+                          "a": "This option is incorrect. It is an example of a function signature with two required arguments but no default values. ",
+                          "b": "This option is the correct answer. It is an example of a function signature with default arguments. The default values 'value1' and 'value2' are provided for argument1 and argument2, respectively.",
+                          "c": "This option is incorrect. It is also an example of a function signature with a default argument. The default value 'value1' is provided for argument2. If the corresponding argument is not provided, it will take the default value.",
+                          "d": "This option is incorrect. It is not a valid syntax in Python."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    
+    {
+      "question": "What is the purpose of arbitrary arguments in Python?",
+      "answers": {
+        "a": "To pass a fixed number of arguments to a function",
+        "b": "To pass a variable number of arguments to a function",
+        "c": "To pass keyword arguments to a function",
+        "d": "All of the above"
+      },
+       "explanations": {
+                            "a": "This option is incorrect because arbitrary arguments are specifically used to pass a variable number of arguments to a function, not a fixed number. ",
+                            "b": "This option is correct. Arbitrary arguments, specified using the *args syntax, allow a function to accept a variable number of arguments. This provides flexibility when calling the function with different numbers of arguments.",
+                            "c": "This option is incorrect. Keyword arguments are passed using the **kwargs syntax, which is different from arbitrary arguments (*args). Keyword arguments allow you to pass arguments with specific names and values, whereas arbitrary arguments are used to handle multiple positional arguments.",
+                            "d": "This option is incorrect"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the output of the following code snippet?\ndef my_fun(a, b, *args):\n    print(a, b, args)\n\nmy_fun(1,2,3,4,5,6)",
+      "answers": {
+        "a": "It will throw an Error",
+        "b": "1 2 (3, 4, 5, 6)",
+        "c": "1 2 [3, 4, 5,6]",
+        "d": "1 2 3 4 5 6"
+      },
+       "explanations": {
+                          "a": "This option is incorrect. The given code snippet is valid and will not throw an error.",
+                          "b": "This option is correct. When the function my_fun is called with the arguments 1, 2, 3, 4, 5, 6, the values 1 and 2 are assigned to the parameters a and b respectively. The remaining arguments 3, 4, 5, 6 are packed into a tuple and assigned to the args parameter.",
+                          "c": "This option is incorrect. In the given code snippet, the additional arguments 3, 4, 5, 6 are packed into a tuple, not a list. Therefore, the correct representation of args is (3, 4, 5, 6) using parentheses, not square brackets.",
+                          "d": "This option is incorrect. The print statement in the code snippet separates the values with spaces, so the output will be space-separated, not as individual values. Additionally, the args parameter is represented as a tuple, not as individual values."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following statements is true about required arguments in Python functions?",
+      "answers": {
+        "a": "Required arguments must always be passed while calling a function",
+        "b": "Required arguments can have default values",
+        "c": "Required arguments are identified by their parameter name in the function call.",
+        "d": "None of the above"
+      },
+       "explanations": {
+                          "a": "This statement is incorrect. Required arguments are indeed necessary to be passed when calling a function, but there is an exception. If a default value is provided for a required argument, it becomes an optional argument, and it doesn't need to be explicitly passed if the default value is suitable.",
+                          "b": "This statement is incorrect. Required arguments are those that do not have a default value. They must be provided with a value when calling the function.",
+                          "c": "This statement is incorrect. Required arguments are identified by their position, not their parameter name, in the function call.",
+                          "d": "This option is correct. None of the statements mentioned above accurately describes the nature of required arguments in Python functions."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the output of the following code snippet?\ndef my_fun(a, b, **kwargs):\n    print(a, b, kwargs)\n\nmy_fun(1,2, x=10, y=20)",
+      "answers": {
+        "a": "1 2 {'x': 10, 'y': 20}",
+        "b": "TypeError",
+        "c": "1 2 {'**kwargs': {'x': 10, 'y': 20}}",
+        "d": "None of the Above"
+      },
+       "explanations": {
+                          "a": "This is the correct answer. In the given code snippet, the function my_fun accepts two required arguments a and b, and **kwargs as a keyword argument to accept an arbitrary number of keyword arguments. When calling my_fun(1, 2, x=10, y=20), the values 1 and 2 are assigned to the required arguments a and b, and the keyword arguments x=10 and y=20 are assigned to kwargs. ",
+                          "b": "This is incorrect. The code snippet does not raise a TypeError. It is able to handle the provided arguments correctly.",
+                          "c": "This is incorrect. The output does not include the literal string '**kwargs'. The code snippet correctly unpacks the keyword arguments into the kwargs dictionary.",
+                          "d": "This is incorrect. One of the options provided is indeed the correct answer."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    
+    
+    
+    {
+      "question": "What is the purpose of the double asterisk (**) before an argument in a Python function definition?",
+      "answers": {
+        "a": "It allows the argument to accept multiple values as a tuple.",
+        "b": "It allows the argument to accept keyword arguments as a dictionary.",
+        "c": "It allows the argument to accept multiple values as a list.",
+        "d": "It allows the argument to accept a single value as a string."
+      },
+       "explanations": {
+                          "a": "This is incorrect. The double asterisk (**) before an argument in a Python function definition is used to indicate that the argument accepts keyword arguments as a dictionary, not multiple values as a tuple.",
+                          "b": "This is correct. The double asterisk (**) before an argument in a Python function definition is known as double star or kwargs syntax. It allows the argument to accept keyword arguments passed to the function as a dictionary.",
+                          "c": "This is incorrect. The double asterisk (**) before an argument does not allow the argument to accept multiple values as a list. It specifically indicates that the argument accepts keyword arguments as a dictionary.",
+                          "d": "This is incorrect. The double asterisk (**) before an argument does not specify the type or format of the argument value. It is used to indicate that the argument accepts keyword arguments as a dictionary, not a single value as a string."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

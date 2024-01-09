@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Argument Syntax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/swappable.js"></script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="v-tabs">
+            <ul>
+              <li class="is-active" id="default" onclick="changeTabs(event)">
+                <a> Default Arguments </a>
+              </li>
+              <li id="variable" onclick="changeTabs(event)">
+                <a> Arbitrary arguments </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="default">
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-3-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">Applications of Argument Syntax</div>
+            <div class="v-datalist-row">
+              Drag and drop the options to the blanks to complete the program to
+              perform a task using extended argument syntax.
+            </div>
+            <div class="v-datalist-row v-bold">
+              Make a function to calculate the price of a product after
+              discount. The function should take the price of the product,
+              quantity and the discount percentage as arguments. If the quantity
+              is not provided, it should be assumed to be 1. If the discount
+              percentage is not provided, it should be assumed to be 10%.
+            </div>
+            <div class="v-datalist-row">Sample outputs</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">calculatePrice(100, 2, 20) # 160
+calculatePrice(100, 2)     # 180
+calculatePrice(100)        # 90
+						</div>
+          </div>
+        </div>
+        <div class="column is-5-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Complete the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+def calculatePrice(price, <div class="blank blank-default drag" draggable="true"></div>, <div class="blank blank-default drag" draggable="true"></div>):
+    discountAmount = price * (discount / 100)
+    return <div class="blank blank-default drag" draggable="true"></div>
+		
+print("Final Price: " + str(calculatePrice(100, 2, 20)))
+print("Final Price: " + str(calculatePrice(100, 2)))
+print("Final Price: " + str(calculatePrice(100)))
+					
+            </div>
+            <div class="v-datalist-row options">
+              <div class="option drag" draggable="true">quantity = 1</div>
+              <!-- prettier-ignore -->
+              <div class="option drag" draggable="true">(price - discountAmount)*quantity</div>
+              <div class="option drag" draggable="true">discount = 10</div>
+              <div class="option drag" draggable="true">quantity = 10</div>
+              <div class="option drag" draggable="true">
+                discountAmount*quantity
+              </div>
+              <div class="option drag" draggable="true">discount = 1</div>
+            </div>
+            <div class="v-datalist-row">
+              <button
+                class="v-button"
+                style="margin-bottom: 1rem"
+                onclick="handleSubmitDefault()"
+              >
+                Submit
+              </button>
+              <button
+                class="v-button"
+                style="margin-left: 1rem"
+                onclick="revealAnswerDefault()"
+              >
+                Reveal Answer
+              </button>
+            </div>
+            <div class="v-datalist-row hidden correct" id="correct-default">
+              Correct Answer! View the same application without using extended
+              argument syntax below.
+            </div>
+            <div class="v-datalist-row hidden wrong" id="wrong-default">
+              Wrong Answer :(
+            </div>
+            <div class="v-datalist-row hidden all" id="all-default">
+              Fill all the blanks.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-4-desktop is-12-mobile is-12-tablet">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">
+              The same application without extended argument syntax
+            </div>
+            <div class="v-datalist-row" id="complete">
+              Complete the experiment first!
+            </div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code hidden" id="answer">
+def calculatePrice(price, quantity, discount):
+    if quantity == None:
+        quantity = 1
+    if discount == None:
+        discount = 10
+			
+    discountAmount = price * (discount / 100)
+    return (price - discountAmount)*quantity
+						</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="variable hidden">
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-3-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">Applications of Argument Syntax</div>
+            <div class="v-datalist-row">
+              Drag and drop the options to the blanks to complete the program to
+              perform a task using extended argument syntax.
+            </div>
+            <div class="v-datalist-row v-bold">
+              Make a function that tells us about a person and his expenses.
+              Take his name as a compulsory argument, his expenses as a list of
+              arbitrary arguments and his information as arbitrary keyword
+              arguments. The function should print the name of the person, the
+              sum of his expenses, and the information about him.
+            </div>
+            <div class="v-datalist-row v-bold">Sample input</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code" >information('Adyansh',1,2,contact='123456')</div>
+            <div class="v-datalist-row v-bold">Output</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code" >Your name is Adyansh
+Your expenses are 3
+Your contact number is 123456
+						</div>
+          </div>
+        </div>
+        <div class="column is-5-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Complete the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+def information(name, <div class="blank blank-variable drag" draggable="true"></div>, <div class="blank blank-variable drag" draggable="true"></div>):
+    print('Your name is', name)
+    sum = 0
+    for i in expenses:
+        sum += i
+    print('Your total expenses are', sum)
+    for key, value in <div class="blank blank-variable drag" draggable="true"></div>:
+        print('Your', key, 'is', value)
+
+information('Adyansh', 1, 2, 3,  contact=1234567890)
+            </div>
+            <div class="v-datalist-row options">
+              <div class="option drag" draggable="true">*info</div>
+              <div class="option drag" draggable="true">*expenses</div>
+              <div class="option drag" draggable="true">info.items()</div>
+              <div class="option drag" draggable="true">**info</div>
+              <div class="option drag" draggable="true">**expenses</div>
+              <div class="option drag" draggable="true">info</div>
+            </div>
+            <div class="v-datalist-row">
+              <button
+                class="v-button"
+                style="margin-bottom: 1rem"
+                onclick="handleSubmitVariable()"
+              >
+                Submit
+              </button>
+              <button
+                class="v-button"
+                style="margin-left: 1rem"
+                onclick="revealAnswerVariable()"
+              >
+                Reveal Answer
+              </button>
+            </div>
+            <div class="v-datalist-row hidden correct" id="correct-variable">
+              Correct Answer! View the same application without using extended
+              argument syntax below.
+            </div>
+            <div class="v-datalist-row hidden wrong" id="wrong-variable">
+              Wrong Answer :(
+            </div>
+            <div class="v-datalist-row hidden all" id="all-variable">
+              Fill all the blanks.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-4-desktop is-12-mobile is-12-tablet">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">
+              The same application without extended argument syntax
+            </div>
+            <div class="v-datalist-row" id="complete-variable">
+              Complete the experiment first!
+            </div>
+            <div class="v-datalist-row hidden" id="answer-variable">
+              You cannot do this same function without extended argument syntax
+              without passing a list or a dictionary as an argument.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  <script src="../assets/js/iframeResize.js"></script></body>
+</html>

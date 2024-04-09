@@ -1,0 +1,3 @@
+There are two tabs in this experiment - 
+1. Learn - This tab aims at testing your coding skills with extended argument syntax and aims at teaching you about the same. You have to drag and drop the correct code in the given space and you will be shown code which does the same thing but without using argument syntax.
+2. Practice - This tab shows you how argument syntax works through an interactive animation. Just fill in the blanks with correct input and you will be shown an animation according to that.

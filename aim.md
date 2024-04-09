@@ -1,0 +1,1 @@
+To learn about extended argument syntax and how we can use it to make python code much simpler

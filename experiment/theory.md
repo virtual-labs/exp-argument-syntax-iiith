@@ -4,7 +4,7 @@
 Let us understand argument syntax in python with a real world scenario 
 
 
-|<p>1\.</p><p>![](images/Aspose.Words.7a8adaa7-d66d-4a9f-bf4f-4c05d7403cc8.001.jpeg)</p>|<p>2\.</p><p>![](images/Aspose.Words.7a8adaa7-d66d-4a9f-bf4f-4c05d7403cc8.002.jpeg)</p>|<p>3\.</p><p>![](images/Aspose.Words.7a8adaa7-d66d-4a9f-bf4f-4c05d7403cc8.003.jpeg)</p>|
+|<p>1\.</p><p>![](images/Aspose.Words.7a8adaa7-d66d-4a9f-bf4f-4c05d7403cc8.001.jpeg)</p>|<p>2\.</p><p>![](images/Aspose.Words.7a8adaa7-d66d-4a9f-bf4f-4c05d7403cc8.002.png)</p>|<p>3\.</p><p>![](images/Aspose.Words.7a8adaa7-d66d-4a9f-bf4f-4c05d7403cc8.003.png)</p>|
 | :- | :- | :- |
 
 
